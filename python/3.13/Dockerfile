@@ -22,4 +22,7 @@ RUN groupadd -g 10000 -r app && \
     mkdir -p /home/app && \
     chown app:app /home/app
 
+RUN pip install --upgrade pip && \
+    pip install --no-cache-dir python-dotenv==1.1.1 ddtrace==3.15.0
+
 USER app
